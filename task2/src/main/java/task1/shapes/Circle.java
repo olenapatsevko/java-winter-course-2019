@@ -1,7 +1,7 @@
 package task1.shapes;
 import task1.abstraction.Shape;
 
-public class Circle extends Shape {
+public class Circle extends Shape  {
   private   double radius;
 
 
@@ -20,4 +20,6 @@ public class Circle extends Shape {
     public double calcArea() {
         return Math.PI * radius * radius;
     }
+
+
 }

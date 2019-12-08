@@ -1,7 +1,9 @@
 package task1.abstraction;
 
 
-public abstract class Shape implements Drawable {
+import java.util.Comparator;
+
+public abstract class Shape implements Drawable , Comparable<Shape> , Comparator<Shape> {
 
     private String shapeColor;
 
@@ -31,4 +33,18 @@ public abstract class Shape implements Drawable {
     public String toString() {
         return draw();
     }
+
+    @Override
+    public int compareTo(Shape o) {
+        return this.shapeColor.charAt(0)-o.shapeColor.charAt(0);
+    }
+
+    @Override
+    public int compare(Shape o1, Shape o2) {
+        return (int) (o1.calcArea()-o2.calcArea());
+    }
+
+
+
+
 }
