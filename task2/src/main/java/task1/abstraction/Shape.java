@@ -25,9 +25,7 @@ public abstract class Shape implements Drawable , Comparable<Shape> , Comparator
         return sum;
     }
 
-    public Shape[] getShapeArray(int i ){
-        return new Shape[i];
-    }
+
 
     @Override
     public String toString() {
