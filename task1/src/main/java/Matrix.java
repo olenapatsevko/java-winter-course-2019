@@ -2,6 +2,7 @@ import java.util.Arrays;
 
 public class Matrix {
 
+
     protected static double[][] matrixRevert(double[][] matrix) {
         double[][] temp = new double[matrix.length][matrix.length];
         for (int i = 0; i < matrix.length; i++) {
