@@ -1,6 +1,6 @@
 package task2;
 
-import secondpart.control.BookController;
+import task2.control.BookController;
 
 public class Main {
 

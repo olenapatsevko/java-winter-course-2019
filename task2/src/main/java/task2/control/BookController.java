@@ -1,12 +1,13 @@
 package task2.control;
 
-import secondpart.model.BookShelf;
-import secondpart.view.BookView;
+import task2.model.BookShelf;
+import task2.view.BookView;
+import task2.view.MenuView;
 
 import java.util.Arrays;
 
-import static secondpart.view.BookView.*;
-import static secondpart.view.BookView.view;
+import static task2.view.BookView.*;
+import static task2.view.BookView.view;
 
 public class BookController {
 
@@ -18,13 +19,9 @@ public class BookController {
         while (true) {
 
             BookView.view("Choose your variant\n");
-            BookView.view("\n 1 - See yor Bookshelf \n 2 - See authors books " +
-                    "\n 3 - See all the books of certain publication " +
-                    "\n 4 - See the books that were published after special year " +
-                    "\n 5 - See ordered by publication books " +
-                    "\n 6 - Exit");
 
-            switch (BookView.getMenu()) {
+
+            switch (MenuView.getMenu()) {
                 case (1): {
                     view(bookShelf.getBooks());
                     break;

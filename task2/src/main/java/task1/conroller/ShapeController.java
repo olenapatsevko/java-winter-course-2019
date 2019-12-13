@@ -28,28 +28,7 @@ public class ShapeController {
     }
 
     public  static void start() {
-       Shape []shapes = {new Circle("Blue", 4),
-               new Triangle("Red",4,3),
-               new Rectangle("Rose", 3,5),
-               new Circle("Purple", 8),
-               new Triangle("Red",2,1.5),
-               new Triangle("Red",4,3),
-               new Rectangle("Rose", 3,5),
-               new Circle("Purple", 8),
-               new Triangle("Green",2,1.5),
-               new Triangle("Red",4,3),
-               new Rectangle("Violet", 3,90),
-               new Circle("Purple", 8),
-               new Triangle("Red",2,1.5),
-               new Triangle("White",4,36),
-               new Rectangle("Rose", 6,5),
-               new Circle("Purple", 8),
-               new Triangle("Black",2,1),
-               new Triangle("Red",4,5),
-               new Rectangle("Green", 3,5),
-               new Circle("Purple", 66),
-               new Triangle("Black",2,1.5),
-              };
+       Shape []shapes = arrayinit();
        view("Our figures");
        view(shapes);
 
@@ -57,9 +36,34 @@ public class ShapeController {
        sort(shapes, (o1, o2) -> (int) (o1.calcArea()-o2.calcArea()));
        view(shapes);
 
-       view("Sorted with Comparator");
+       view("Sorted with Comparable");
        sort(shapes);
        view(shapes);
 
+    }
+
+    private static Shape[] arrayinit(){
+        return   new  Shape []{new Circle("Blue", 4),
+                new Triangle("Red",4,3),
+                new Rectangle("Rose", 3,5),
+                new Circle("Purple", 8),
+                new Triangle("Red",2,1.5),
+                new Triangle("Red",4,3),
+                new Rectangle("Rose", 3,5),
+                new Circle("Purple", 8),
+                new Triangle("Green",2,1.5),
+                new Triangle("Red",4,3),
+                new Rectangle("Violet", 3,90),
+                new Circle("Purple", 8),
+                new Triangle("Red",2,1.5),
+                new Triangle("White",4,36),
+                new Rectangle("Rose", 6,5),
+                new Circle("Purple", 8),
+                new Triangle("Black",2,1),
+                new Triangle("Red",4,5),
+                new Rectangle("Green", 3,5),
+                new Circle("Purple", 66),
+                new Triangle("Black",2,1.5),
+        };
     }
 }
