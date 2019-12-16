@@ -5,6 +5,17 @@ public abstract class Toy {
     private double price;
     private String name;
 
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+
+    private int size;
+
+
     public double getPrice() {
         return price;
     }
