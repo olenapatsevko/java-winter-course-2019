@@ -1,6 +1,6 @@
 package part1.Comparators;
 
-import part1.Toy;
+import part1.toys.toy.Toy;
 
 import java.util.Comparator;
 

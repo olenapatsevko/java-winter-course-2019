@@ -1,4 +1,4 @@
-package part1;
+package part1.toys.toy;
 
 public abstract class Toy {
 
@@ -14,6 +14,13 @@ public abstract class Toy {
         this.size = size;
     }
 
+
+    public Toy(String name, double price, int size) {
+        this.name = name;
+        this.price = price;
+        this.size = size;
+
+    }
 
 
 

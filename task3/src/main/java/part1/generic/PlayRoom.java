@@ -1,9 +1,11 @@
-package part1;
+package part1.generic;
 
 
 import part1.Comparators.ToyComparatorName;
 import part1.Comparators.ToyComparatorPrice;
 import part1.Comparators.ToyComparatorSize;
+import part1.toys.toy.Toy;
+
 import java.util.List;
 
 
