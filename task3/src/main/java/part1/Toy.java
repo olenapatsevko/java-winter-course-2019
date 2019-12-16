@@ -4,6 +4,7 @@ public abstract class Toy {
 
     private double price;
     private String name;
+    private int size;
 
     public int getSize() {
         return size;
@@ -13,7 +14,7 @@ public abstract class Toy {
         this.size = size;
     }
 
-    private int size;
+
 
 
     public double getPrice() {
