@@ -5,7 +5,7 @@ import java.util.Comparator;
 public class Book implements Comparator<Book> {
 
     private String name;
-    private String Author;
+    private String author;
     private String publishing;
     private  int year;
     private int pages;
@@ -14,7 +14,7 @@ public class Book implements Comparator<Book> {
     @Override
     public String toString() {
         return  "name='" + name + '\'' +
-                ", Author='" + Author + '\'' +
+                ", Author='" + author + '\'' +
                 ", publishing='" + publishing + '\'' +
                 ", year=" + year +
                 ", pages=" + pages +
@@ -30,11 +30,11 @@ public class Book implements Comparator<Book> {
     }
 
     public String getAuthor() {
-        return Author;
+        return author;
     }
 
     public void setAuthor(String author) {
-        Author = author;
+        this.author = author;
     }
 
     public String getPublishing() {
@@ -71,7 +71,7 @@ public class Book implements Comparator<Book> {
 
     public Book(String name, String author, String publishing, int year, int pages, double price) {
         this.name = name;
-        Author = author;
+        this.author = author;
         this.publishing = publishing;
         this.year = year;
         this.pages = pages;

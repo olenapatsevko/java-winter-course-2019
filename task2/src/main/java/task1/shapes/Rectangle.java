@@ -1,5 +1,6 @@
 package task1.shapes;
 
+import task1.abstraction.Colors;
 import task1.abstraction.Shape;
 
 public class Rectangle extends Shape {
@@ -8,7 +9,7 @@ public class Rectangle extends Shape {
     private double width;
 
 
-    public Rectangle(String shapeColor, double length, double width) {
+    public Rectangle(Colors shapeColor, double length, double width) {
         super(shapeColor);
         this.length = length;
         this.width = width;

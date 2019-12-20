@@ -1,4 +1,5 @@
 package task1.shapes;
+import task1.abstraction.Colors;
 import task1.abstraction.Shape;
 
 public class Circle extends Shape  {
@@ -11,7 +12,7 @@ public class Circle extends Shape  {
                 "radius=" + radius +"\n";
     }
 
-    public Circle(String shapeColor, double radius) {
+    public Circle(Colors shapeColor, double radius) {
         super(shapeColor);
         this.radius = radius;
     }

@@ -1,18 +1,18 @@
 package task2.control;
 
+import task2.model.Book;
 import task2.model.BookShelf;
 import task2.view.BookView;
-import task2.view.MenuView;
 
 import java.util.Arrays;
 
-import static task2.view.BookView.*;
 import static task2.view.BookView.view;
 
 public class BookController {
 
 
     public static void start() {
+
         int i = BookView.getSize();
         BookShelf bookShelf = new BookShelf(i);
         view(bookShelf.getBooks());
@@ -21,7 +21,7 @@ public class BookController {
             BookView.view("Choose your variant\n");
 
 
-            switch (MenuView.getMenu()) {
+            switch (BookView.MenuView.getMenu()) {
                 case (1): {
                     view(bookShelf.getBooks());
                     break;

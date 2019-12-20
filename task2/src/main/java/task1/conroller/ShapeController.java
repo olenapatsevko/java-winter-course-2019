@@ -19,13 +19,6 @@ public class ShapeController {
 
 
 
-    public double countShapeArea(Shape[] shapes, String key) {
-        double sum = 0;
-        for (Shape shape : shapes) {
-            sum += shape.getClass().getSimpleName().equals(key) ? shape.calcArea() : 0;
-        }
-        return sum;
-    }
 
     public  static void start() {
        Shape []shapes = arrayinit();

@@ -5,13 +5,13 @@ import java.util.Comparator;
 
 public abstract class Shape implements Drawable , Comparable<Shape> , Comparator<Shape> {
 
-    private String shapeColor;
+    private Colors shapeColor;
 
     public String draw() {
         return this.getClass().getSimpleName() + " is " + shapeColor;
     }
 
-    public Shape(String shapeColor) {
+    public Shape(Colors shapeColor) {
         this.shapeColor = shapeColor;
     }
 
@@ -34,7 +34,7 @@ public abstract class Shape implements Drawable , Comparable<Shape> , Comparator
 
     @Override
     public int compareTo(Shape o) {
-        return this.shapeColor.charAt(0)-o.shapeColor.charAt(0);
+        return this.shapeColor.compareTo(o.shapeColor);
     }
 
     @Override
