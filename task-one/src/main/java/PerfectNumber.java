@@ -1,16 +1,16 @@
 
 public  class PerfectNumber {
 
-
     protected static String findPerfectNumbers(int lowBound, int highBound) {
         String temp = "";
         for (int i = lowBound; i < highBound; i++) {
             if (isNumPerfect(i)) {
-                temp += " " + i;
+                temp += " " + i; //NOSONAR
             }
         }
         return temp;
     }
+
 
     public static boolean isNumPerfect(int n) {
         int sum = 1;
