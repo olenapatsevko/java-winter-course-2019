@@ -6,9 +6,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="task3" />
-        <module name="task2" />
-        <module name="task1" />
+        <module name="task-eleven" />
+        <module name="task-six" />
+        <module name="task-ten" />
+        <module name="task-four" />
+        <module name="task-two" />
+        <module name="task-three" />
+        <module name="intermediate-project" />
+        <module name="task-one" />
+        <module name="task-seven" />
+        <module name="task-five" />
+        <module name="task-eight" />
+        <module name="task-nine" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="11" />
