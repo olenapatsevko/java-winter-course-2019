@@ -15,17 +15,17 @@
     </properties>
 
     <modules>
-        <module>task1</module>
-        <module>task2</module>
-        <module>task3</module>
-        <module>task4</module>
-        <module>task5</module>
-        <module>task6</module>
-        <module>task7</module>
-        <module>task8</module>
-        <module>task9</module>
-        <module>task10</module>
-        <module>task11</module>
+        <module>task-one</module>
+        <module>task-two</module>
+        <module>task-three</module>
+        <module>task-four</module>
+        <module>task-five</module>
+        <module>task-six</module>
+        <module>task-seven</module>
+        <module>task-eight</module>
+        <module>task-nine</module>
+        <module>task-ten</module>
+        <module>task-eleven</module>
         <module>intermediate-project</module>
 
     </modules>
