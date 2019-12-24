@@ -6,18 +6,73 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="task-eleven" />
-        <module name="task-six" />
-        <module name="task-ten" />
-        <module name="task-four" />
-        <module name="task-two" />
-        <module name="task-three" />
         <module name="intermediate-project" />
-        <module name="task-one" />
-        <module name="task-seven" />
+      </profile>
+      <profile name="Annotation profile for java-winter-course-2019" enabled="true">
+        <sourceOutputDir name="../task5/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../task5/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
         <module name="task-five" />
-        <module name="task-eight" />
+      </profile>
+      <profile name="Annotation profile for task-nine" enabled="true">
+        <sourceOutputDir name="../task9/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../task9/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
         <module name="task-nine" />
+      </profile>
+      <profile name="Annotation profile for task-two" enabled="true">
+        <sourceOutputDir name="../task2/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../task2/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="task-two" />
+      </profile>
+      <profile name="Annotation profile for task-four" enabled="true">
+        <sourceOutputDir name="../task4/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../task4/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="task-four" />
+      </profile>
+      <profile name="Annotation profile for task-eight" enabled="true">
+        <sourceOutputDir name="../task8/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../task8/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="task-eight" />
+      </profile>
+      <profile name="Annotation profile for task-one" enabled="true">
+        <sourceOutputDir name="../task1/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../task1/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="task-one" />
+      </profile>
+      <profile name="Annotation profile for task-seven" enabled="true">
+        <sourceOutputDir name="../task7/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../task7/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="task-seven" />
+      </profile>
+      <profile name="Annotation profile for task-eleven" enabled="true">
+        <sourceOutputDir name="../task11/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../task11/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="task-eleven" />
+      </profile>
+      <profile name="Annotation profile for task-three" enabled="true">
+        <sourceOutputDir name="../task3/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../task3/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="task-three" />
+      </profile>
+      <profile name="Annotation profile for task-six" enabled="true">
+        <sourceOutputDir name="../task6/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../task6/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="task-six" />
+      </profile>
+      <profile name="Annotation profile for task-ten" enabled="true">
+        <sourceOutputDir name="../task10/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../task10/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="task-ten" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="11" />
