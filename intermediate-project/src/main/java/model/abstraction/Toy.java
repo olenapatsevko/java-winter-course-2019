@@ -4,23 +4,25 @@ import model.enums.ChildAgeGroup;
 import model.enums.Model;
 import model.enums.Size;
 
-import java.util.Arrays;
-
 public abstract class Toy {
 
     private Size size;
     private double price;
     private Model model;
-    private ChildAgeGroup[] childAgeGroups;
+    private ChildAgeGroup childAgeGroups;
 
     public Toy() {
     }
 
-    public Toy(Size size, double price, Model model, ChildAgeGroup[] childAgeGroups) {
+    public Toy(Size size, double price, Model model, ChildAgeGroup childAgeGroups) {
         this.size = size;
         this.price = price;
         this.model = model;
         this.childAgeGroups = childAgeGroups;
+    }
+
+    public Toy(Model model) {
+        this.model = model;
     }
 
     public Size getSize() {
@@ -47,11 +49,11 @@ public abstract class Toy {
         this.model = model;
     }
 
-    public ChildAgeGroup[] getChildAgeGroups() {
+    public ChildAgeGroup getChildAgeGroups() {
         return childAgeGroups;
     }
 
-    public void setChildAgeGroups(ChildAgeGroup[] childAgeGroups) {
+    public void setChildAgeGroups(ChildAgeGroup childAgeGroups) {
         this.childAgeGroups = childAgeGroups;
     }
 
@@ -61,6 +63,6 @@ public abstract class Toy {
                 "size=" + size +
                         ", price=" + price +
                         ", model=" + model +
-                        ", childAgeGroups=" + Arrays.toString(childAgeGroups);
+                        ", childAgeGroups=" + (childAgeGroups);
     }
 }

@@ -7,20 +7,20 @@ import model.enums.Size;
 
 public class Car extends Toy {
     private String name = "Bugatti";
-    private boolean automated = false;
 
 
-    public Car() {
+    public Car(Model model) {
+        super(model);
     }
 
-    public Car(Size size, double price, Model model, ChildAgeGroup[] childAgeGroups, String name, boolean automated) {
+    public Car(Size size, double price, Model model, ChildAgeGroup childAgeGroups, String name) {
         super(size, price, model, childAgeGroups);
         this.name = name;
-        this.automated = automated;
+
     }
 
 
-    public Car(Size size, double price, Model model, ChildAgeGroup[] childAgeGroups) {
+    public Car(Size size, double price, Model model, ChildAgeGroup childAgeGroups) {
         super(size, price, model, childAgeGroups);
 
     }
@@ -33,17 +33,10 @@ public class Car extends Toy {
         this.name = name;
     }
 
-    public boolean isAutomated() {
-        return automated;
-    }
 
-    public void setAutomated(boolean automated) {
-        this.automated = automated;
-    }
 
     @Override
     public String toString() {
-        return "Name='" + name +
-                ", automated=" + automated + super.toString();
+        return "Name='" + name + super.toString();
     }
 }

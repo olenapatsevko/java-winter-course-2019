@@ -44,9 +44,13 @@ public class PlayingChildRoom extends ChildRoom {
         List<Toy> toys = getToys();
         toys.add(toy);
         if ((this.budget - toy.getPrice()) < 0) {
-            decreaseBudget(toy.getPrice());
-            setToys(toys);
-            print(toy.toString() + " added");
+            if (childCategoryToy(toy)) {
+                decreaseBudget(toy.getPrice());
+                setToys(toys);
+                print(toy.toString() + " added\n");
+            } else {
+                print("inappropriate category");
+            }
         } else {
             print("Not enough money to add" + toy.toString());
         }
@@ -111,5 +115,15 @@ public class PlayingChildRoom extends ChildRoom {
         return "PlayingChildRoom:" +
                 "childAgeGroups=" + childAgeGroups +
                 ", budget=" + budget + super.toString();
+    }
+
+
+    private boolean childCategoryToy(Toy toy) {
+        for (ChildAgeGroup c : childAgeGroups) {
+            if (toy.getChildAgeGroups().equals(c)) {
+                return true;
+            }
+        }
+        return false;
     }
 }

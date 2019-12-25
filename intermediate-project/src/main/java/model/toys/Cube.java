@@ -8,15 +8,15 @@ import model.enums.Size;
 public class Cube extends Toy {
     private int numberOfSides = 3;
 
-    public Cube() {
-
+    public Cube(Model model) {
+        super(model);
     }
 
-    public Cube(Size size, double price, Model model, ChildAgeGroup[] childAgeGroups) {
+    public Cube(Size size, double price, Model model, ChildAgeGroup childAgeGroups) {
         super(size, price, model, childAgeGroups);
     }
 
-    public Cube(Size size, double price, Model model, ChildAgeGroup[] childAgeGroups, int numberOfSides) {
+    public Cube(Size size, double price, Model model, ChildAgeGroup childAgeGroups, int numberOfSides) {
         super(size, price, model, childAgeGroups);
         this.numberOfSides = numberOfSides;
     }
