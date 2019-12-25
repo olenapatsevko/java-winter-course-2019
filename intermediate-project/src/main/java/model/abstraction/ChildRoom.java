@@ -8,7 +8,6 @@ public abstract class ChildRoom implements Room {
     private List<T> toys;
 
     public ChildRoom() {
-
     }
 
     public ChildRoom(List<T> toys) {

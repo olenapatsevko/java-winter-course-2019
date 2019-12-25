@@ -3,26 +3,30 @@ package model.room;
 import model.abstraction.ChildRoom;
 import model.enums.ChildAgeGroup;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static view.abstraction.View.print;
 
 public class PlayingChildRoom extends ChildRoom {
-    private ChildAgeGroup[] childAgeGroups;
+    private List<ChildAgeGroup> childAgeGroups = new ArrayList<>();
     private double budget;
 
-    public PlayingChildRoom(List<ChildRoom.T> toys, ChildAgeGroup[] childAgeGroups, double budget) {
+    public PlayingChildRoom(List<ChildRoom.T> toys, List<ChildAgeGroup> childAgeGroups, double budget) {
         super(toys);
         this.childAgeGroups = childAgeGroups;
         this.budget = budget;
     }
 
-    public ChildAgeGroup[] getChildAgeGroups() {
+    public PlayingChildRoom() {
+    }
+
+    public List<ChildAgeGroup> getChildAgeGroups() {
         return childAgeGroups;
     }
 
-    public void setChildAgeGroups(ChildAgeGroup[] childAgeGroups) {
-        this.childAgeGroups = childAgeGroups;
+    public void setChildAgeGroups(ChildAgeGroup childAgeGroups) {
+        this.childAgeGroups.add(childAgeGroups);
     }
 
     public double getBudget() {

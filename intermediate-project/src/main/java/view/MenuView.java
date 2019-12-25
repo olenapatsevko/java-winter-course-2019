@@ -8,12 +8,27 @@ public class MenuView extends View {
     private String[] startMenu = {"Enter budget", " Enter age group"};
 
 
-    public void menu() {
-
-
+    public void menu(String[] m) {
+        for (int i = 0; i < m.length; i++) {
+            print(i + 1 + m[i]);
+        }
     }
 
-    public void startMenu() {
-
+    public String[] getMenu() {
+        return menu;
     }
+
+    public void setMenu(String[] menu) {
+        this.menu = menu;
+    }
+
+    public String[] getStartMenu() {
+        return startMenu;
+    }
+
+    public void setStartMenu(String[] startMenu) {
+        this.startMenu = startMenu;
+    }
+
+
 }

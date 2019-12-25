@@ -10,10 +10,10 @@ public enum ChildAgeGroup {
     private int minAge;
     private int maxAge;
 
-    ChildAgeGroup(int minAge, int maxAge) {
-        this.minAge = minAge;
-        this.maxAge = maxAge;
-    }
+     ChildAgeGroup(int minAge, int maxAge) {
+         this.minAge = minAge;
+         this.maxAge = maxAge;
+     }
 
     public int getMinAge() {
         return minAge;
@@ -35,4 +35,11 @@ public enum ChildAgeGroup {
     public String description() {
         return "For" + this + " age range vary from " + this.minAge + " to " + this.maxAge + " \n";
     }
+
+    public static ChildAgeGroup createChildAgeGroup(String s) {
+        return ChildAgeGroup.valueOf(s.toUpperCase());
+
+    }
+
+
 }

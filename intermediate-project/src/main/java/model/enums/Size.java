@@ -12,4 +12,8 @@ public enum Size {
     public String getSize() {
         return size;
     }
+
+    public Size createSize(String s) {
+        return Size.valueOf(s.toUpperCase());
+    }
 }

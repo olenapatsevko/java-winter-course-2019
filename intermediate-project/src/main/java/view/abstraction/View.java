@@ -9,10 +9,35 @@ public abstract class View {
         System.out.println(s);
     }
 
+    public void printAllEnums(Enum[] enums) {
+        for (Enum e : enums) {
+            print(e.toString());
+        }
+    }
 
-    static String scanString() {
+
+    public String scanString() {
         return in.nextLine().trim();
 
     }
+
+    public int scanInteger() {
+        try {
+            return Integer.parseInt(scanString());
+        } catch (ClassCastException e) {
+            print("Enter correct integer data");
+            return scanInteger();
+        }
+    }
+
+    public double scanNumber() {
+        try {
+            return Double.parseDouble(scanString());
+        } catch (ClassCastException e) {
+            print("Enter correct double data");
+            return scanNumber();
+        }
+    }
+
 
 }
