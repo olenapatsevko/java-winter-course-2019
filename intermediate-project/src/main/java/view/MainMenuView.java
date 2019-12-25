@@ -1,6 +1,7 @@
 package view;
 
 
+import model.enums.Model;
 import view.abstraction.View;
 
 public class MainMenuView extends View {
@@ -18,5 +19,17 @@ public class MainMenuView extends View {
 
     public void menu() {
         super.menu(menu);
+    }
+
+    public Model enterModel() {
+        for (; ; ) {
+            print("Enter model");
+            this.printAllEnums(Model.values());
+            try {
+                return Model.createModel(scanString());
+            } catch (IllegalArgumentException | NullPointerException e) {
+                print("Illegal argument");
+            }
+        }
     }
 }

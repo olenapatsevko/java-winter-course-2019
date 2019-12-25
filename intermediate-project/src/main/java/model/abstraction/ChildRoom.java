@@ -2,10 +2,11 @@ package model.abstraction;
 
 import model.abstraction.base.Room;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class ChildRoom implements Room {
-    private List<Toy> toys;
+    private List<Toy> toys = new ArrayList<>();
 
     public ChildRoom() {
     }

@@ -30,7 +30,7 @@ public abstract class View {
     public int scanInteger() {
         try {
             return Integer.parseInt(scanString());
-        } catch (ClassCastException e) {
+        } catch (Exception e) {
             print("Enter correct integer data");
             return scanInteger();
         }
@@ -39,7 +39,7 @@ public abstract class View {
     public double scanNumber() {
         try {
             return Double.parseDouble(scanString());
-        } catch (ClassCastException e) {
+        } catch (Exception e) {
             print("Enter correct double data");
             return scanNumber();
         }

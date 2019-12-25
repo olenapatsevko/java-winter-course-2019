@@ -10,7 +10,7 @@ import java.util.List;
 import static view.abstraction.View.print;
 
 public class PlayingChildRoom extends ChildRoom {
-    private List<ChildAgeGroup> childAgeGroups = new ArrayList<>();
+    private List<ChildAgeGroup> childAgeGroups = new ArrayList<ChildAgeGroup>();
     private double budget;
 
 
@@ -43,7 +43,7 @@ public class PlayingChildRoom extends ChildRoom {
     public void addToyToRoom(Toy toy) {
         List<Toy> toys = getToys();
         toys.add(toy);
-        if ((this.budget - toy.getPrice()) < 0) {
+        if (((this.budget - toy.getPrice()) >= 0)) {
             if (childCategoryToy(toy)) {
                 decreaseBudget(toy.getPrice());
                 setToys(toys);
