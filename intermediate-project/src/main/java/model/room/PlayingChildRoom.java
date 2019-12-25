@@ -5,6 +5,8 @@ import model.enums.ChildAgeGroup;
 
 import java.util.List;
 
+import static view.MainView.print;
+
 public class PlayingChildRoom extends ChildRoom {
     private ChildAgeGroup[] childAgeGroups;
     private double budget;
@@ -34,13 +36,29 @@ public class PlayingChildRoom extends ChildRoom {
     //todo
     @Override
     public void addToyToRoom(T toy) {
+        List<T> toys = getToys();
+        toys.add(toy);
+        if ((this.budget - toy.getPrice()) < 0) {
+            setBudget(getBudget() - toy.getPrice());
+            setToys(toys);
+            print(toy.toString() + " added");
+        } else {
+            print("Not enough money to add" + toy.toString());
+        }
 
     }
 
     //todo
     @Override
     public void removeToyFromRoom(T toy) {
-
+        List<T> toys = getToys();
+        if (findToy(toy) >= 0) {
+            toys.remove(findToy(toy));
+            setBudget(getBudget() + toy.getPrice());
+            print(toy.toString() + " has been removed");
+        } else {
+            print("Nothing to remove");
+        }
     }
 
     //todo
