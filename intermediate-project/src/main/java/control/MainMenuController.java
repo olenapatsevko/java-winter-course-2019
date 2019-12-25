@@ -38,20 +38,20 @@ public class MainMenuController extends Controller {
                 case (4): {
                     mainMenuView.print("Enter sort parameter");
                     innerSort.sort(mainMenuView.scanString());
-               
+
                     break;
                 }
                 case (5): {
                     break;
                 }
                 case (6): {
+                    playingChildRoom.setChildAgeGroups(mainMenuView.enterChildAgeGroup());
                     break;
                 }
-
                 case (7): {
                     return;
                 }
-
+                
                 default: {
                     break;
                 }
