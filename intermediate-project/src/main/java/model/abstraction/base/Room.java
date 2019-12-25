@@ -15,6 +15,8 @@ public interface Room {
 
     int findToy(T toy);
 
+    int findAndCountToy(T toy);
+
     class T extends Toy {
 
         public T(Size size, double price, Model model, ChildAgeGroup[] childAgeGroups) {
