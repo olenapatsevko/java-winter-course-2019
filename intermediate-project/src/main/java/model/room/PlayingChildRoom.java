@@ -12,6 +12,7 @@ public class PlayingChildRoom extends ChildRoom {
     private List<ChildAgeGroup> childAgeGroups = new ArrayList<>();
     private double budget;
 
+
     public PlayingChildRoom(List<ChildRoom.T> toys, List<ChildAgeGroup> childAgeGroups, double budget) {
         super(toys);
         this.childAgeGroups = childAgeGroups;
@@ -102,5 +103,12 @@ public class PlayingChildRoom extends ChildRoom {
 
     public void decreaseBudget(double price) {
         setBudget(getBudget() - price);
+    }
+
+    @Override
+    public String toString() {
+        return "PlayingChildRoom:" +
+                "childAgeGroups=" + childAgeGroups +
+                ", budget=" + budget + super.toString();
     }
 }

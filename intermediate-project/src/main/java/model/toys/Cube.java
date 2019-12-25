@@ -27,4 +27,9 @@ public class Cube extends Toy {
         this.numberOfSides = numberOfSides;
     }
 
+    @Override
+    public String toString() {
+        return super.toString() +
+                "numberOfSides=" + numberOfSides;
+    }
 }

@@ -25,5 +25,9 @@ public class Doll extends Toy {
         this.name = name;
     }
 
-
+    @Override
+    public String toString() {
+        return
+                "Name=" + name + " " + super.toString();
+    }
 }

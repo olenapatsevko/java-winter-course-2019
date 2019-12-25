@@ -37,5 +37,9 @@ public class Car extends Toy {
         this.automated = automated;
     }
 
-
+    @Override
+    public String toString() {
+        return "Name='" + name +
+                ", automated=" + automated + super.toString();
+    }
 }

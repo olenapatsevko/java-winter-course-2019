@@ -4,6 +4,8 @@ import model.enums.ChildAgeGroup;
 import model.enums.Model;
 import model.enums.Size;
 
+import java.util.Arrays;
+
 public abstract class Toy {
 
     private Size size;
@@ -51,5 +53,12 @@ public abstract class Toy {
         this.childAgeGroups = childAgeGroups;
     }
 
-
+    @Override
+    public String toString() {
+        return
+                "size=" + size +
+                        ", price=" + price +
+                        ", model=" + model +
+                        ", childAgeGroups=" + Arrays.toString(childAgeGroups);
+    }
 }

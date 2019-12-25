@@ -33,5 +33,8 @@ public abstract class ChildRoom implements Room {
         return -1;
     }
 
-
+    @Override
+    public String toString() {
+        return ", toys=" + toys;
+    }
 }

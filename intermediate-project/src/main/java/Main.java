@@ -1,9 +1,9 @@
-import control.StartMenuController;
+import control.MainController;
 
 public class Main {
 
     public static void main(String[] args) {
-        StartMenuController startMenuController = new StartMenuController();
-        startMenuController.start();
+        MainController mainController = new MainController();
+        mainController.start();
     }
 }
