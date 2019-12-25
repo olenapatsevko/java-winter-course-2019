@@ -1,6 +1,7 @@
 package control;
 
 import control.abstraction.Controller;
+import model.enums.Model;
 import view.MainMenuView;
 
 
@@ -17,7 +18,17 @@ public class MainMenuController extends Controller {
                     break;
                 }
                 case (2): {
-                    break;
+                    mainMenuView.print("Enter toy model");
+                    try {
+                        mainMenuView.printAllEnums(Model.values());
+                        playingChildRoom.addToyToRoom(ToyFabric.createToy(mainMenuView.scanString()));
+
+                    } catch (IllegalArgumentException | NullPointerException e) {
+                        mainMenuView.print("Illegal argument");
+                        break;
+                    }
+
+
                 }
                 case (3): {
                     break;

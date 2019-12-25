@@ -13,7 +13,7 @@ public enum Size {
         return size;
     }
 
-    public Size createSize(String s) {
+    public static Size createSize(String s) {
         return Size.valueOf(s.toUpperCase());
     }
 }

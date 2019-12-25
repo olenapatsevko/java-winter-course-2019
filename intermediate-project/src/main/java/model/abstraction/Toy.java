@@ -13,6 +13,8 @@ public abstract class Toy {
     private Model model;
     private ChildAgeGroup[] childAgeGroups;
 
+    public Toy() {
+    }
 
     public Toy(Size size, double price, Model model, ChildAgeGroup[] childAgeGroups) {
         this.size = size;

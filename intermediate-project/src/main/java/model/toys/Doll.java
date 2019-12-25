@@ -8,6 +8,10 @@ import model.enums.Size;
 public class Doll extends Toy {
     private String name = "Barbie";
 
+    public Doll() {
+        super();
+    }
+
     public Doll(Size size, double price, ChildAgeGroup[] childAgeGroups) {
         super(size, price, Model.DOLL, childAgeGroups);
     }

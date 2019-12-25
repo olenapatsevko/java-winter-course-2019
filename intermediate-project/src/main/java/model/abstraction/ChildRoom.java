@@ -5,28 +5,28 @@ import model.abstraction.base.Room;
 import java.util.List;
 
 public abstract class ChildRoom implements Room {
-    private List<T> toys;
+    private List<Toy> toys;
 
     public ChildRoom() {
     }
 
-    public ChildRoom(List<T> toys) {
+    public ChildRoom(List<Toy> toys) {
         this.toys = toys;
     }
 
-    public List<T> getToys() {
+    public List<Toy> getToys() {
         return toys;
     }
 
-    public void setToys(List<T> toys) {
+    public void setToys(List<Toy> toys) {
         this.toys = toys;
     }
 
     @Override
-    public int findToy(T t) {
+    public int findToy(Toy toy) {
         for (int i = 0; i < this.toys.size(); i++) {
-            Toy toy = this.toys.get(i);
-            if (toy.getModel().equals(t.getModel()) && toy.getPrice() == t.getPrice() && toy.getSize().equals(t.getSize())) {
+            Toy toy1 = this.toys.get(i);
+            if (toy1.getModel().equals(toy1.getModel()) && toy.getPrice() == toy1.getPrice() && toy.getSize().equals(toy.getSize())) {
                 return i;
             }
         }

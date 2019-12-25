@@ -1,28 +1,21 @@
 package model.abstraction.base;
 
 import model.abstraction.Toy;
-import model.enums.ChildAgeGroup;
-import model.enums.Model;
-import model.enums.Size;
+
 
 public interface Room {
 
-    void addToyToRoom(T toy);
+    void addToyToRoom(Toy toy);
 
-    void removeToyFromRoom(T toy);
+    void removeToyFromRoom(Toy toy);
 
-    void removeAllToys(T toy);
+    void removeAllToys(Toy toy);
 
-    int findToy(T toy);
+    int findToy(Toy toy);
 
-    int findAndCountToy(T toy);
+    int findAndCountToy(Toy toy);
 
-    class T extends Toy {
 
-        public T(Size size, double price, Model model, ChildAgeGroup[] childAgeGroups) {
-            super(size, price, model, childAgeGroups);
-        }
-    }
 
 
 }

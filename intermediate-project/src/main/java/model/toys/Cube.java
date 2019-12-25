@@ -8,6 +8,9 @@ import model.enums.Size;
 public class Cube extends Toy {
     private int numberOfSides = 3;
 
+    public Cube() {
+
+    }
 
     public Cube(Size size, double price, Model model, ChildAgeGroup[] childAgeGroups) {
         super(size, price, model, childAgeGroups);

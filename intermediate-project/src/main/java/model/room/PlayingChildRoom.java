@@ -1,6 +1,7 @@
 package model.room;
 
 import model.abstraction.ChildRoom;
+import model.abstraction.Toy;
 import model.enums.ChildAgeGroup;
 
 import java.util.ArrayList;
@@ -13,7 +14,7 @@ public class PlayingChildRoom extends ChildRoom {
     private double budget;
 
 
-    public PlayingChildRoom(List<ChildRoom.T> toys, List<ChildAgeGroup> childAgeGroups, double budget) {
+    public PlayingChildRoom(List<Toy> toys, List<ChildAgeGroup> childAgeGroups, double budget) {
         super(toys);
         this.childAgeGroups = childAgeGroups;
         this.budget = budget;
@@ -39,8 +40,8 @@ public class PlayingChildRoom extends ChildRoom {
     }
 
     @Override
-    public void addToyToRoom(T toy) {
-        List<T> toys = getToys();
+    public void addToyToRoom(Toy toy) {
+        List<Toy> toys = getToys();
         toys.add(toy);
         if ((this.budget - toy.getPrice()) < 0) {
             decreaseBudget(toy.getPrice());
@@ -54,8 +55,8 @@ public class PlayingChildRoom extends ChildRoom {
 
 
     @Override
-    public void removeToyFromRoom(T toy) {
-        List<T> toys = getToys();
+    public void removeToyFromRoom(Toy toy) {
+        List<Toy> toys = getToys();
         if (findToy(toy) >= 0) {
             toys.remove(findToy(toy));
             increaseBudget(toy.getPrice());
@@ -66,8 +67,8 @@ public class PlayingChildRoom extends ChildRoom {
     }
 
     @Override
-    public void removeAllToys(T toy) {
-        List<T> list = getToys();
+    public void removeAllToys(Toy toy) {
+        List<Toy> list = getToys();
         for (int i = 0; i < findAndCountToy(toy); i++) {
             list.remove(toy);
         }
@@ -76,10 +77,10 @@ public class PlayingChildRoom extends ChildRoom {
     }
 
     @Override
-    public int findAndCountToy(T toy) {
-        List<T> toys = getToys();
+    public int findAndCountToy(Toy toy) {
+        List<Toy> toys = getToys();
         int count = 0;
-        for (T t : toys) {
+        for (Toy t : toys) {
             if (t.equals(toy)) {
                 ++count;
             }

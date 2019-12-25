@@ -9,6 +9,10 @@ public class Car extends Toy {
     private String name = "Bugatti";
     private boolean automated = false;
 
+
+    public Car() {
+    }
+
     public Car(Size size, double price, Model model, ChildAgeGroup[] childAgeGroups, String name, boolean automated) {
         super(size, price, model, childAgeGroups);
         this.name = name;
