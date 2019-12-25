@@ -5,6 +5,12 @@ import java.util.Scanner;
 public abstract class View {
     protected static Scanner in = new Scanner(System.in);
 
+    public void menu(String[] m) {
+        for (int i = 0; i < m.length; i++) {
+            print(i + 1 + " - " + m[i]);
+        }
+    }
+
     public static void print(String s) {
         System.out.println(s);
     }

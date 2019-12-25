@@ -2,40 +2,40 @@ package control;
 
 import control.abstraction.Controller;
 import model.enums.ChildAgeGroup;
-import view.MenuView;
+import view.StartMenuView;
 
 import static model.enums.ChildAgeGroup.createChildAgeGroup;
 
 
-public class MenuController extends Controller {
+public class StartMenuController extends Controller {
 
-    MenuView menuView = new MenuView();
+    private StartMenuView startMenuView = new StartMenuView();
 
     @Override
     public void start() {
 
         while (true) {
-            menuView.menu(menuView.getStartMenu());
-            
-            switch (menuView.scanInteger()) {
+            startMenuView.menu();
+
+            switch (startMenuView.scanInteger()) {
                 case (1): {
-                    menuView.print("Put the budget");
-                    playingChildRoom.setBudget(menuView.scanNumber());
+                    startMenuView.print("Put the budget");
+                    playingChildRoom.setBudget(startMenuView.scanNumber());
                     break;
                 }
                 case (2): {
                     try {
-                        menuView.printAllEnums(ChildAgeGroup.values());
-                        playingChildRoom.setChildAgeGroups(createChildAgeGroup(menuView.scanString()));
+                        startMenuView.printAllEnums(ChildAgeGroup.values());
+                        playingChildRoom.setChildAgeGroups(createChildAgeGroup(startMenuView.scanString()));
                     } catch (IllegalArgumentException | NullPointerException e) {
-                        menuView.print("Illegal argument");
+                        startMenuView.print("Illegal argument");
                         break;
 
                     }
                     break;
                 }
                 default: {
-                    menuView.print("Illegal argument");
+                    startMenuView.print("Illegal argument");
                     break;
 
                 }
