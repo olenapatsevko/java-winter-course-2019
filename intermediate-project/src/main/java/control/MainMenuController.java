@@ -66,7 +66,14 @@ public class MainMenuController extends Controller {
 
     }
 
+    /**
+     * Inner class for sorting lists with toys
+     */
     private class InnerSort {
+
+        /**
+         * @param s- name of the parameter with
+         */
         void sort(String s) {
             switch (s.toLowerCase()) {
                 case ("price"): {

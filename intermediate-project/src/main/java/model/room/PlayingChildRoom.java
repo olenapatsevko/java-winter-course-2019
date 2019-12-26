@@ -9,6 +9,9 @@ import java.util.List;
 
 import static view.abstraction.View.print;
 
+/**
+ * class that represents the child room with toys for special category
+ */
 public class PlayingChildRoom extends ChildRoom {
     private List<ChildAgeGroup> childAgeGroups = new ArrayList<ChildAgeGroup>();
     private double budget;
@@ -39,13 +42,18 @@ public class PlayingChildRoom extends ChildRoom {
         this.budget = budget;
     }
 
+    /**
+     * @param toy toy that we want to add to our room
+     *            also in checked if it appropriate for budget and age category of a room
+     */
     @Override
     public void addToyToRoom(Toy toy) {
         List<Toy> toys = getToys();
-        toys.add(toy);
-        if (((this.budget - toy.getPrice()) >= 0)) {
+
+        if (this.budget >= toy.getPrice()) {
             if (childCategoryToy(toy)) {
                 decreaseBudget(toy.getPrice());
+                toys.add(toy);
                 setToys(toys);
                 print(toy.toString() + " added\n");
             } else {
@@ -58,6 +66,9 @@ public class PlayingChildRoom extends ChildRoom {
     }
 
 
+    /**
+     * @param toy remove the first toy that was found in the room similar to this
+     */
     @Override
     public void removeToyFromRoom(Toy toy) {
         List<Toy> toys = getToys();
@@ -70,6 +81,9 @@ public class PlayingChildRoom extends ChildRoom {
         }
     }
 
+    /**
+     * @param toy type of you which copies we want to remove from room
+     */
     @Override
     public void removeAllToys(Toy toy) {
         List<Toy> list = getToys();
@@ -80,6 +94,10 @@ public class PlayingChildRoom extends ChildRoom {
         setToys(list);
     }
 
+    /**
+     * @param toy type of toy that we want to find in our room
+     * @return number of toys that we have found
+     */
     @Override
     public int findAndCountToy(Toy toy) {
         List<Toy> toys = getToys();
@@ -92,20 +110,34 @@ public class PlayingChildRoom extends ChildRoom {
         return count;
     }
 
+
+    /**
+     * @param price price of a toy that we remove from our room
+     * @param count number of similar toys that we want to remove
+     */
     public void increaseBudget(double price, int count) {
         setBudget(getBudget() + (price * (double) count));
     }
 
+
+    /**
+     * @param price of a toy that we want to remove from our room
+     */
     public void increaseBudget(double price) {
         setBudget(getBudget() + price);
     }
 
-
+    /**
+     * @param price price of a toy that we add to our room
+     * @param count number of similar toys that we want to add
+     */
     public void decreaseBudget(double price, int count) {
         setBudget(getBudget() - (price * (double) count));
     }
 
-
+    /**
+     * @param price price of a toy that we add to our room
+     */
     public void decreaseBudget(double price) {
         setBudget(getBudget() - price);
     }
@@ -118,6 +150,10 @@ public class PlayingChildRoom extends ChildRoom {
     }
 
 
+    /**
+     * @param toy toy that we want to add
+     * @return if category of this toy is appropriate for age category of the room return true
+     */
     private boolean childCategoryToy(Toy toy) {
         for (ChildAgeGroup c : childAgeGroups) {
             if (toy.getChildAgeGroups().equals(c)) {

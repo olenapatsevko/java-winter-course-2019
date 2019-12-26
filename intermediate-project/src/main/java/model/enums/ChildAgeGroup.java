@@ -32,10 +32,19 @@ public enum ChildAgeGroup {
     }
 
 
+    /**
+     * @return some kind of to string method with explains to a user which age in included in each category
+     */
     public String description() {
         return "For" + this + " age range vary from " + this.minAge + " to " + this.maxAge + " \n";
     }
 
+    /**
+     * it's a cover of a valueOf method with allows us to read a name of an enum this any case
+     *
+     * @param s name of the enum with any case
+     * @return new enum
+     */
     public static ChildAgeGroup createChildAgeGroup(String s) {
         return ChildAgeGroup.valueOf(s.toUpperCase());
 

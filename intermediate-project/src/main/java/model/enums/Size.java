@@ -13,6 +13,12 @@ public enum Size {
         return size;
     }
 
+    /**
+     * it's a cover of a valueOf method with allows us to read a name of an enum this any case
+     *
+     * @param s name of the enum with any case
+     * @return new enum
+     */
     public static Size createSize(String s) {
         return Size.valueOf(s.toUpperCase());
     }

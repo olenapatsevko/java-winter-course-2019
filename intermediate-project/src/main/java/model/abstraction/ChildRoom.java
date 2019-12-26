@@ -5,6 +5,9 @@ import model.abstraction.base.Room;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * abstract child room that encapsulate the list of toys which are in the room
+ */
 public abstract class ChildRoom implements Room {
     private List<Toy> toys = new ArrayList<>();
 
@@ -23,6 +26,10 @@ public abstract class ChildRoom implements Room {
         this.toys = toys;
     }
 
+    /**
+     * @param toy that we should find
+     * @return position in the toy list or negative number(-1) if there are no such toy in the list
+     */
     @Override
     public int findToy(Toy toy) {
         for (int i = 0; i < this.toys.size(); i++) {

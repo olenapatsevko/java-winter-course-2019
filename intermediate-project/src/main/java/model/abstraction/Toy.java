@@ -4,6 +4,10 @@ import model.enums.ChildAgeGroup;
 import model.enums.Model;
 import model.enums.Size;
 
+
+/**
+ * abstract presentation of a toy which includes main features which we are able to do with any toy
+ */
 public abstract class Toy {
 
     private Size size;
