@@ -13,6 +13,10 @@ public class MainMenuController extends Controller {
     private MainMenuView mainMenuView = new MainMenuView();
     private InnerSort innerSort = new InnerSort();
     private ToyController toyController = new ToyController();
+
+    /**
+     * this method let to coordinate actions between view and model
+     */
     public void start() {
 
         while (true) {

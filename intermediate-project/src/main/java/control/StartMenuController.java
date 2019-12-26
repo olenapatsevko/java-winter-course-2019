@@ -11,6 +11,9 @@ public class StartMenuController extends Controller {
 
     private StartMenuView startMenuView = new StartMenuView();
 
+    /**
+     * visualize not optional features to enter to start work with childroom for a user
+     */
     @Override
     public void start() {
 
@@ -52,6 +55,9 @@ public class StartMenuController extends Controller {
 
     }
 
+    /**
+     * @return if both parameters are entered return true
+     */
     private boolean checkNecessaryConditions() {
         if (playingChildRoom.getBudget() > 0.0 && !playingChildRoom.getChildAgeGroups().isEmpty()) {
             return true;

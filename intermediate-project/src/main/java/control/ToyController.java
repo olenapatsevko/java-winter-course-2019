@@ -13,6 +13,10 @@ import java.util.List;
 
 
 public class ToyController extends Controller {
+
+    /**
+     * ArraysLists of measure params to select appropriate values due to selected measures by user
+     */
     private ToyView toyView = new ToyView();
     private ArrayList<Size> sizes = new ArrayList<>();
     private ArrayList<Model> models = new ArrayList<>();
@@ -27,6 +31,10 @@ public class ToyController extends Controller {
 
     }
 
+
+    /**
+     * method to enter the measures
+     */
     private void initialization() {
         for (int i = 0; i < 2; i++) {
             sizes.add(toyView.enterSize());
@@ -36,6 +44,9 @@ public class ToyController extends Controller {
         }
     }
 
+    /**
+     * sorting ass the ArrayLists for comfortable selection due to measures
+     */
     void sortAll() {
         prices.sort(new Comparator<Double>() {
             @Override
@@ -63,6 +74,10 @@ public class ToyController extends Controller {
         });
     }
 
+    /**
+     * @param toys ArrayList with Toys to select from
+     * @return selected Toys due to entered params price
+     */
     private List<Toy> pricePick(List<Toy> toys) {
         List<Toy> temp = toys;
         for (int i = 0; i < temp.size(); i++) {
@@ -73,6 +88,10 @@ public class ToyController extends Controller {
         return temp;
     }
 
+    /**
+     * @param toys ArrayList with Toys to select from
+     * @return selected Toys due to entered params Model
+     */
     private List<Toy> modelPick(List<Toy> toys) {
         List<Toy> temp = toys;
         for (int i = 0; i < temp.size(); i++) {
@@ -83,6 +102,10 @@ public class ToyController extends Controller {
         return temp;
     }
 
+    /**
+     * @param toys ArrayList with Toys to select from
+     * @return selected Toys due to entered params Size
+     */
     private List<Toy> sizePick(List<Toy> toys) {
         List<Toy> temp = toys;
         for (int i = 0; i < temp.size(); i++) {
@@ -93,6 +116,10 @@ public class ToyController extends Controller {
         return temp;
     }
 
+    /**
+     * @param toys ArrayList with Toys to select from
+     * @return selected Toys due to entered params of Child Age Group
+     */
     private List<Toy> childAgeGroupPick(List<Toy> toys) {
         List<Toy> temp = toys;
         for (int i = 0; i < temp.size(); i++) {
