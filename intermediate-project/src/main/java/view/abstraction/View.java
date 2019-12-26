@@ -1,6 +1,7 @@
 package view.abstraction;
 
 import model.enums.ChildAgeGroup;
+import model.enums.Model;
 import model.enums.Size;
 
 import java.util.Scanner;
@@ -66,6 +67,19 @@ public abstract class View {
             this.printAllEnums(Size.values());
             try {
                 return Size.createSize(scanString());
+            } catch (IllegalArgumentException | NullPointerException e) {
+                print("Illegal argument");
+
+            }
+        }
+    }
+
+    public Model enterModel() {
+        for (; ; ) {
+            print("Enter model");
+            this.printAllEnums(Size.values());
+            try {
+                return Model.createModel(scanString());
             } catch (IllegalArgumentException | NullPointerException e) {
                 print("Illegal argument");
 

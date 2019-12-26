@@ -13,11 +13,11 @@
         <module name="task-five" />
         <module name="task-eight" />
         <module name="intermediate-project" />
+        <module name="task-nine" />
         <module name="task-seven" />
         <module name="task-eleven" />
-        <module name="task-three" />
         <module name="task-six" />
-        <module name="task-nine" />
+        <module name="task-three" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="11" />

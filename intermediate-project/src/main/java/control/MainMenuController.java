@@ -12,6 +12,7 @@ import java.util.Comparator;
 public class MainMenuController extends Controller {
     private MainMenuView mainMenuView = new MainMenuView();
     private InnerSort innerSort = new InnerSort();
+    private ToyController toyController = new ToyController();
     public void start() {
 
         while (true) {
@@ -42,6 +43,7 @@ public class MainMenuController extends Controller {
                     break;
                 }
                 case (5): {
+                    toyController.start();
                     break;
                 }
                 case (6): {
@@ -51,7 +53,7 @@ public class MainMenuController extends Controller {
                 case (7): {
                     return;
                 }
-                
+
                 default: {
                     break;
                 }
