@@ -5,6 +5,10 @@ import model.enums.ChildAgeGroup;
 import model.enums.Model;
 import model.enums.Size;
 
+
+/**
+ * Toy expanse with personal params  and overloaded @method toString()
+ */
 public class Car extends Toy {
     private String name = "Bugatti";
 
@@ -32,7 +36,6 @@ public class Car extends Toy {
     public void setName(String name) {
         this.name = name;
     }
-
 
 
     @Override

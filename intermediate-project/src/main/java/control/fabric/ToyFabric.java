@@ -8,9 +8,16 @@ import model.toys.Doll;
 import view.ToyView;
 
 
+/**
+ * class that allows to create new Toy objects using the enum model (presentation of a fabric pattern)
+ */
 public class ToyFabric {
     static ToyView toyView = new ToyView();
 
+    /**
+     * @param model model of a toy
+     * @return toy of entered model
+     */
     public static Toy createToy(Model model) {
 
         switch (model) {
@@ -31,6 +38,10 @@ public class ToyFabric {
     }
 
 
+    /**
+     * @param doll empty Doll object
+     * @return doll object filled with values
+     */
     public static Doll fillDollParams(Doll doll) {
 
         doll.setName(toyView.name());
@@ -42,6 +53,10 @@ public class ToyFabric {
 
     }
 
+    /**
+     * @param car empty Car object
+     * @return car object filled with values
+     */
     public static Car fillCarParams(Car car) {
         car.setName(toyView.name());
         car.setPrice(toyView.price());
@@ -51,6 +66,10 @@ public class ToyFabric {
 
     }
 
+    /**
+     * @param cube empty Cube object
+     * @return cube object filled with values
+     */
     public static Cube fillCubeParams(Cube cube) {
         cube.setPrice(toyView.price());
         cube.setSize(toyView.enterSize());

@@ -5,6 +5,9 @@ import model.enums.ChildAgeGroup;
 import model.enums.Model;
 import model.enums.Size;
 
+/**
+ * Toy expanse with personal params  and overloaded @method toString()
+ */
 public class Doll extends Toy {
     private String name = "Barbie";
 

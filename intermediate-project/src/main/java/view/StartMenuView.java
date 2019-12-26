@@ -4,6 +4,9 @@ import view.abstraction.View;
 
 public class StartMenuView extends View {
 
+    /**
+     * start menu items
+     */
     private String[] startMenu = {"Enter budget", " Enter age group"};
 
 
