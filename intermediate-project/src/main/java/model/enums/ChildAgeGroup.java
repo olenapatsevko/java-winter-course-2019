@@ -36,7 +36,7 @@ public enum ChildAgeGroup {
      * @return some kind of to string method with explains to a user which age in included in each category
      */
     public String description() {
-        return "For" + this + " age range vary from " + this.minAge + " to " + this.maxAge + " \n";
+        return "For " + this + " age range vary from " + this.minAge + " to " + this.maxAge + " \n";
     }
 
     /**

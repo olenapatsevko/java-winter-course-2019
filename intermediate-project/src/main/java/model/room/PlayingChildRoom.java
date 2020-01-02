@@ -4,8 +4,9 @@ import model.abstraction.ChildRoom;
 import model.abstraction.Toy;
 import model.enums.ChildAgeGroup;
 
-import java.util.ArrayList;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
 
 import static view.abstraction.View.print;
 
@@ -13,11 +14,11 @@ import static view.abstraction.View.print;
  * class that represents the child room with toys for special category
  */
 public class PlayingChildRoom extends ChildRoom {
-    private List<ChildAgeGroup> childAgeGroups = new ArrayList<ChildAgeGroup>();
+    private Set<ChildAgeGroup> childAgeGroups = new LinkedHashSet<>();
     private double budget;
 
 
-    public PlayingChildRoom(List<Toy> toys, List<ChildAgeGroup> childAgeGroups, double budget) {
+    public PlayingChildRoom(List<Toy> toys, Set<ChildAgeGroup> childAgeGroups, double budget) {
         super(toys);
         this.childAgeGroups = childAgeGroups;
         this.budget = budget;
@@ -26,7 +27,7 @@ public class PlayingChildRoom extends ChildRoom {
     public PlayingChildRoom() {
     }
 
-    public List<ChildAgeGroup> getChildAgeGroups() {
+    public Set<ChildAgeGroup> getChildAgeGroups() {
         return childAgeGroups;
     }
 
@@ -87,11 +88,13 @@ public class PlayingChildRoom extends ChildRoom {
     @Override
     public void removeAllToys(Toy toy) {
         List<Toy> list = getToys();
+        increaseBudget(toy.getPrice(), findAndCountToy(toy));
         for (int i = 0; i < findAndCountToy(toy); i++) {
             list.remove(toy);
         }
-        increaseBudget(toy.getPrice(), findAndCountToy(toy));
-        setToys(list);
+        this.setToys(list);
+
+
     }
 
     /**
@@ -100,11 +103,10 @@ public class PlayingChildRoom extends ChildRoom {
      */
     @Override
     public int findAndCountToy(Toy toy) {
-        List<Toy> toys = getToys();
         int count = 0;
-        for (Toy t : toys) {
-            if (t.equals(toy)) {
-                ++count;
+        for (Toy t : getToys()) {
+            if (t.compare(toy)) {
+                count++;
             }
         }
         return count;
@@ -116,7 +118,7 @@ public class PlayingChildRoom extends ChildRoom {
      * @param count number of similar toys that we want to remove
      */
     public void increaseBudget(double price, int count) {
-        setBudget(getBudget() + (price * (double) count));
+        this.setBudget(this.getBudget() + (price * (double) count));
     }
 
 
@@ -124,7 +126,7 @@ public class PlayingChildRoom extends ChildRoom {
      * @param price of a toy that we want to remove from our room
      */
     public void increaseBudget(double price) {
-        setBudget(getBudget() + price);
+        this.setBudget(getBudget() + price);
     }
 
     /**

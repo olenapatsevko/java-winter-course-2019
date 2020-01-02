@@ -1,28 +1,25 @@
-package model.abstraction;
-
+package model.room;
 
 import model.enums.ChildAgeGroup;
 import model.enums.Model;
 import model.enums.Size;
-import model.room.PlayingChildRoom;
 import model.toys.Car;
 import model.toys.Cube;
 import model.toys.Doll;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class ChildRoomTest {
 
+public class PlayingChildRoomTest {
 
-    public static ChildRoom childRoom = new PlayingChildRoom() {{
+    public static PlayingChildRoom childRoom = new PlayingChildRoom() {{
         setBudget(1000000);
         setChildAgeGroups(ChildAgeGroup.ADOLESCENT);
         addToyToRoom(new Doll(Size.SMALL, 23.0, Model.DOLL, ChildAgeGroup.ADOLESCENT, "99"));
-        addToyToRoom(new Car(Size.MEDIUM, 26.3, Model.CAR, ChildAgeGroup.ADOLESCENT, "1"));
+        addToyToRoom(new Car(Size.MEDIUM, 26.0, Model.CAR, ChildAgeGroup.ADOLESCENT, "1"));
         addToyToRoom(new Cube(Size.TINY, 223.340, Model.CUBE, ChildAgeGroup.ADOLESCENT, 9));
-        addToyToRoom(new Car(Size.MEDIUM, 2123.0234, Model.CAR, ChildAgeGroup.ADOLESCENT, "3"));
+        addToyToRoom(new Car(Size.MEDIUM, 26.0, Model.CAR, ChildAgeGroup.ADOLESCENT, "1"));
         addToyToRoom(new Doll(Size.SMALL, 243.210, Model.DOLL, ChildAgeGroup.ADOLESCENT, "4"));
         addToyToRoom(new Cube(Size.MEDIUM, 253.10, Model.CUBE, ChildAgeGroup.ADOLESCENT, 8));
         addToyToRoom(new Doll(Size.BIG, 293.60, Model.DOLL, ChildAgeGroup.ADOLESCENT, "6"));
@@ -43,12 +40,23 @@ public class ChildRoomTest {
         addToyToRoom(new Car(Size.BIG, 823.10, Model.CAR, ChildAgeGroup.ADOLESCENT, "357"));
     }};
 
-
-    @Before
     @Test
-    public void findToy() {
-        assertEquals(childRoom.findToy(new Doll(Size.SMALL, 23.0, Model.DOLL, ChildAgeGroup.ADOLESCENT, "99")), 0);
-        assertEquals(childRoom.findToy(new Car(Size.MEDIUM, 2123.0234, Model.CAR, ChildAgeGroup.ADOLESCENT, "3")), 3);
+    public void removeToyFromRoom() {
+        double price = childRoom.getBudget();
+        childRoom.removeToyFromRoom(new Doll(Size.SMALL, 23.0, Model.DOLL, ChildAgeGroup.ADOLESCENT, "99"));
+        assertEquals(price + 23.0, childRoom.getBudget(), 0.0);
     }
 
+
+    @Test
+    public void removeAllToys() {
+        double price = childRoom.getBudget();
+        childRoom.removeAllToys(new Car(Size.MEDIUM, 26.0, Model.CAR, ChildAgeGroup.ADOLESCENT, "1"));
+        assertEquals(price + 52, childRoom.getBudget(), 0.0);
+    }
+
+    @Test
+    public void findAndCountToy() {
+        assertEquals(childRoom.findAndCountToy(new Car(Size.TINY, 13.10, Model.CAR, ChildAgeGroup.ADOLESCENT, "13")), 1);
+    }
 }

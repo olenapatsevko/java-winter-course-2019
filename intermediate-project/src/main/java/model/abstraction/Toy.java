@@ -25,6 +25,16 @@ public abstract class Toy {
         this.childAgeGroups = childAgeGroups;
     }
 
+    public boolean compare(Toy t) {
+        if (this.getSize().equals(t.getSize())
+                && this.getModel().equals(t.getModel())
+                && this.getPrice() == t.getPrice()
+                && this.getChildAgeGroups().equals(t.getChildAgeGroups())) {
+            return true;
+        }
+        return false;
+    }
+
     public Toy(Model model) {
         this.model = model;
     }

@@ -2,11 +2,10 @@ package control;
 
 import control.abstraction.Controller;
 import control.fabric.ToyFabric;
-import model.abstraction.Toy;
 import model.enums.Model;
 import view.MainMenuView;
 
-import java.util.Comparator;
+import static model.room.RoomSort.*;
 
 
 public class MainMenuController extends Controller {
@@ -70,6 +69,10 @@ public class MainMenuController extends Controller {
 
     }
 
+    public InnerSort getInnerSort() {
+        return this.innerSort;
+    }
+
     /**
      * Inner class for sorting lists with toys
      */
@@ -81,43 +84,23 @@ public class MainMenuController extends Controller {
         void sort(String s) {
             switch (s.toLowerCase()) {
                 case ("price"): {
-                    playingChildRoom.getToys().sort(new Comparator<Toy>() {
-                        @Override
-                        public int compare(Toy o1, Toy o2) {
-                            return (int) (o1.getPrice() - o2.getPrice());
-                        }
-                    });
+                    sortByPrice(playingChildRoom);
                     printRoom();
                     break;
                 }
                 case ("model"): {
-                    playingChildRoom.getToys().sort(new Comparator<Toy>() {
-                        @Override
-                        public int compare(Toy o1, Toy o2) {
-                            return o1.getModel().compareTo(o2.getModel());
-                        }
-                    });
+                    sortByModel(playingChildRoom);
                     printRoom();
                     break;
                 }
                 case ("size"): {
-                    playingChildRoom.getToys().sort(new Comparator<Toy>() {
-                        @Override
-                        public int compare(Toy o1, Toy o2) {
-                            return o1.getSize().compareTo(o2.getSize());
-                        }
-                    });
+                    sortBySize(playingChildRoom);
                     printRoom();
                     break;
 
                 }
                 case ("age group"): {
-                    playingChildRoom.getToys().sort(new Comparator<Toy>() {
-                        @Override
-                        public int compare(Toy o1, Toy o2) {
-                            return o1.getChildAgeGroups().compareTo(o2.getChildAgeGroups());
-                        }
-                    });
+                    sortByAgeGroup(playingChildRoom);
                     printRoom();
                     break;
 
@@ -128,7 +111,10 @@ public class MainMenuController extends Controller {
                 }
             }
         }
+
+
     }
+
 
     private void printRoom() {
         mainMenuView.print("\n" + playingChildRoom.toString() + "\n");

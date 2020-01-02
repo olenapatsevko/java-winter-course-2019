@@ -133,3 +133,5 @@ r
 Bintermediate-project/src/main/java/control/MainMenuController.java,b\1\b1b3e9b52a0b7f3ad0fa2c57197d1a82022dbb37
 m
 =intermediate-project/src/main/java/control/ToyController.java,0\e\0e46a068c5f28134a29b6e1523248ed30c1bf585
+w
+Gintermediate-project/src/test/java/model/abstraction/ChildRoomTest.java,0\0\00d971902abf52564f4fcacb6dd473cdb3fc0870
