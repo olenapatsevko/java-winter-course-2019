@@ -147,3 +147,9 @@ X
 (task-three/src/main/java/part2/Main.java,d\e\deeecb73615789c429cfbfa364f116033222e835
 ^
 .task-three/src/main/java/part2/model/Shop.java,2\4\2455e18dbb347ef32a0e97f2a848cc8a9d9a8294
+a
+1task-three/src/main/java/part2/model/Product.java,2\b\2b0f71f20ac03317abe82e6e5ca56726fcedfcf6
+a
+1task-three/src/main/java/part2/view/ShopView.java,4\c\4c4c678d1bf93eeed2abc5a53380e80f5ab2cdcc
+m
+=task-three/src/main/java/part2/controller/ShopController.java,3\3\33847f8001cb801075d75e39af74f5ed0a171b89

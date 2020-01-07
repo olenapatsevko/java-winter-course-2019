@@ -8,14 +8,6 @@ public class Shop {
     private String name;
     private List<Department> department = new ArrayList<>();
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
 
     public Shop() {
     }
@@ -25,14 +17,26 @@ public class Shop {
         this.department.add(department);
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public void addDepartment(Department department) {
         if (findDepartment(department.getName(), department.getLocation()) == -1) {
             this.department.add(department);
         }
     }
 
-    public void removeDepartment(Department department) {
-        this.department.remove(department);
+    public void removeDepartment(String s1, String s2) {
+        this.department.remove(findDepartment(s1, s2));
+    }
+
+    public void addProductToDepartment(int i, Product product) {
+        this.department.get(i).setProducts(product);
     }
 
     public void sortDepartment() {
@@ -57,7 +61,7 @@ public class Shop {
                 '}';
     }
 
-    public class Department {
+    public static class Department {
         private String name;
         private String location;
         private List<String> services = new ArrayList<>();

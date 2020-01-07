@@ -19,15 +19,17 @@ public class ShopController {
                         break;
                     }
                     case 2: {
+                        shop.addDepartment(ShopView.createDepartment());
                         
                         break;
                     }
                     case 3: {
+                        shop.addProductToDepartment(shop.findDepartment(ShopView.scan("Enter name"), ShopView.scan("Enter location")), ShopView.createProduct());
 
                         break;
                     }
                     case 4: {
-
+                        shop.removeDepartment(ShopView.scan("Enter name "), ShopView.scan("Enter location"));
                         break;
                     }
                     case 5: {
@@ -44,6 +46,7 @@ public class ShopController {
 
                 }
             } catch (Exception ignored) {
+                ShopView.print("Incorrect data");
             }
         }
 
