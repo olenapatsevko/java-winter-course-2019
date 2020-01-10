@@ -153,3 +153,9 @@ a
 1task-three/src/main/java/part2/view/ShopView.java,4\c\4c4c678d1bf93eeed2abc5a53380e80f5ab2cdcc
 m
 =task-three/src/main/java/part2/controller/ShopController.java,3\3\33847f8001cb801075d75e39af74f5ed0a171b89
+e
+5task-four/src/test/java/TemperatureConverterTest.java,0\a\0a69ac52a1cc7760e5d87891c03650771fe40f9c
+a
+1task-four/src/main/java/TemperatureConverter.java,0\d\0d3c010c9266095c990586a7e711d666cb64b6a9
+g
+7task-two/src/test/java/tasktwo/model/BookShelfTest.java,1\8\18e793b21aeafac70b084683f717d5a7e053b5d6

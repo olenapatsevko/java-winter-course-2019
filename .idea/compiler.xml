@@ -7,15 +7,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="task-one" />
-        <module name="task-eleven" />
         <module name="task-ten" />
         <module name="task-four" />
         <module name="task-two" />
         <module name="task-five" />
         <module name="task-eight" />
         <module name="intermediate-project" />
-        <module name="task-seven" />
         <module name="task-nine" />
+        <module name="task-seven" />
+        <module name="task-eleven" />
         <module name="task-six" />
         <module name="task-three" />
       </profile>

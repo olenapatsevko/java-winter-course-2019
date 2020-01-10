@@ -1,19 +1,19 @@
 package model.enums;
 
 public enum ChildAgeGroup {
+    ADOLESCENT(13, 19),
     INFANT(0, 1),
-    TODDLER(2, 2),
     PRESCHOOLER(3, 5),
     SCHOOL_AGED(6, 12),
-    ADOLESCENT(13, 19);
+    TODDLER(2, 2);
 
     private int minAge;
     private int maxAge;
 
-     ChildAgeGroup(int minAge, int maxAge) {
-         this.minAge = minAge;
-         this.maxAge = maxAge;
-     }
+    ChildAgeGroup(int minAge, int maxAge) {
+        this.minAge = minAge;
+        this.maxAge = maxAge;
+    }
 
     public int getMinAge() {
         return minAge;
