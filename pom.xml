@@ -27,6 +27,8 @@
         <module>task-ten</module>
         <module>task-eleven</module>
         <module>intermediate-project</module>
+        <module>reflection-junit-annotation</module>
+
 
     </modules>
 
