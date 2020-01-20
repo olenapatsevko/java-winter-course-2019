@@ -28,6 +28,7 @@
         <module>task-eleven</module>
         <module>intermediate-project</module>
         <module>reflection-junit-annotation</module>
+        <module>lesson2-immutable</module>
 
 
     </modules>
