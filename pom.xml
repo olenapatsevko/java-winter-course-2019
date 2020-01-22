@@ -26,6 +26,9 @@
         <module>lesson2-immutable</module>
         <module>lesson3</module>
         <module>bank</module>
+        <module>lesson4</module>
+        <module>first-part</module>
+        <module>lessons</module>
 
 
     </modules>

@@ -20,7 +20,8 @@ public class AccountRepositoryImpl implements AccountRepository {
     }
 
     @Override
-    public List<Account> findAll() {
+    public List<Account> findAll(int page, int itemsPerPage) {
+        //  @todo  implementations with streams
         return new ArrayList<>(accountMap.values());
     }
 
@@ -34,5 +35,10 @@ public class AccountRepositoryImpl implements AccountRepository {
     public void deleteById(Integer id) {
         accountMap.remove(id);
 
+    }
+
+    @Override
+    public long count() {
+        return accountMap.size();
     }
 }

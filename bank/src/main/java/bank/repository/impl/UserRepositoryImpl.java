@@ -12,7 +12,7 @@ public class UserRepositoryImpl implements UserRepository {
 
     @Override
     public Optional<User> findByEmail(String email) {
-        return Optional.of(userMap.values().stream().filter(user -> user.getEmail().equals(email)).findFirst().get());
+        return userMap.values().stream().filter(user -> user.getEmail().equals(email)).findFirst();
     }
 
     @Override
@@ -26,7 +26,8 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     @Override
-    public List<User> findAll() {
+    public List<User> findAll(int page, int ItemsPerPage) {
+        //implement per stream
         return new ArrayList<>(userMap.values());
     }
 
@@ -38,5 +39,10 @@ public class UserRepositoryImpl implements UserRepository {
     @Override
     public void deleteById(Integer id) {
         userMap.remove(id);
+    }
+
+    @Override
+    public long count() {
+        return userMap.size();
     }
 }

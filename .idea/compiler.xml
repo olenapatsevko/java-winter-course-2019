@@ -8,11 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="task-one" />
         <module name="lesson3" />
+        <module name="lessons" />
         <module name="task-four" />
-        <module name="task-two" />
-        <module name="task-five" />
-        <module name="intermediate-project" />
         <module name="task-three" />
+        <module name="task-five" />
+        <module name="first-part" />
+        <module name="intermediate-project" />
+        <module name="task-two" />
+        <module name="lesson4" />
         <module name="bank" />
         <module name="reflection-junit-annotation" />
         <module name="lesson2-immutable" />
