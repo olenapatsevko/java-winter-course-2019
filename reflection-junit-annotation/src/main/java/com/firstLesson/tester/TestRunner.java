@@ -42,7 +42,7 @@ public class TestRunner {
         try {
             method.invoke(object);
         } catch (Exception e) {
-            if (!(e.getMessage().equalsIgnoreCase(expectedMessage) && e.getClass().getSimpleName().equals(expected.getSimpleName()))) {
+            if (!(e.getMessage().equalsIgnoreCase(expectedMessage) && e.getClass() == expected)) {
                 throw new IllegalArgumentException("Wrong annotation params");
             }
 

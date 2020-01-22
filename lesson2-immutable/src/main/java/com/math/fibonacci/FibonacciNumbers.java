@@ -7,23 +7,21 @@ package com.math.fibonacci;
  */
 public class FibonacciNumbers {
 
-
-    public int NotRecursiveFibonacci(int index) {
-        int a = 0;
-        int b = 1;
+    public int notRecursiveFibonacci(int index) {
+        int n0 = 0;
+        int n1 = 1;
         for (int i = 2; i <= index; ++i) {
-            int next = a + b;
-            a = b;
-            b = next;
+            int next = n0 + n1;
+            n0 = n1;
+            n1 = next;
         }
 
-        return index < 2 ? index : b;
+        return index < 2 ? index : n1;
     }
 
     public int recursiveFibonacci(int n) {
-        if (n <= 1)
-            return n;
-        return recursiveFibonacci(n - 1) + recursiveFibonacci(n - 2);
+        n = Math.abs(n);
+        return n <= 1 ? n : recursiveFibonacci(n - 1) + recursiveFibonacci(n - 2);
     }
 }
 

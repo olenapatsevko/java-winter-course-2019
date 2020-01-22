@@ -6,15 +6,15 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 @RunWith(JUnit4.class)
-class PerfectNumberTest {
+public class PerfectNumberTest {
 
     @Test
-    void findPerfectNumbers() {
-        assertEquals(" 6 28 496 8128", PerfectNumber.findPerfectNumbers(2,10000));
+    public void findPerfectNumbers() {
+        assertEquals(" 6 28 496 8128", PerfectNumber.findPerfectNumbers(2, 10000));
     }
 
     @Test
-    void isNumPerfect() {
+    public void isNumPerfect() {
         assertTrue(PerfectNumber.isNumPerfect(28));
 
     }
