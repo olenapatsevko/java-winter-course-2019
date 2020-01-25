@@ -8,8 +8,6 @@ import bank.service.PasswordEncryption;
 import bank.service.UserService;
 import bank.service.validator.Validate;
 
-import java.security.NoSuchAlgorithmException;
-import java.security.spec.InvalidKeySpecException;
 import java.util.List;
 
 
@@ -27,20 +25,24 @@ public class UserServiceImp implements UserService {
     }
 
 
-    public boolean login(String email, String password) throws InvalidKeySpecException, NoSuchAlgorithmException {
-        String encryptPassword = passwordEncryption.hashPassword(password);
+    public boolean login(String email, String password) {
+        String encryptPassword = PasswordEncryption.encrypt(password);
+
+        System.out.println(encryptPassword);
         return userRepository
                 .findByEmail(email)
                 .map(User::getPassword)
-                .filter(x -> x.equals(password))
+                .filter(x -> x.equals(encryptPassword))
                 .isPresent();
     }
 
 
     public User register(User user) {
         userValidator.validate(user);
+        user.hashPassword();
         userRepository.save(user);
         return user;
+
     }
 
 

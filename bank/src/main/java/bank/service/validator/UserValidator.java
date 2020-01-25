@@ -15,7 +15,7 @@ public class UserValidator implements Validate<User> {
     @Override
     public void validate(User user) {
         if (!(StringReg.validate(user, User::getEmail, "email") && StringReg.validate(user, User::getPassword, "password"))) {
-            throw new ValidationException();
+            throw new ValidationException("User Validation failed");
         }
     }
 
@@ -25,7 +25,7 @@ public class UserValidator implements Validate<User> {
 
         static {
             map.put("email", "^[\\w!#$%&'*+/=?`{|}~^-]+(?:\\.[\\w!#$%&'*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$");
-            map.put("password", "((?=.*[a-z])(?=.*d)(?=.*[@#$%])(?=.*[A-Z]).{6,16})");
+            map.put("password", "((?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{6,20})");
         }
 
         static boolean validate(User user, Function<User, String> function, String key) {

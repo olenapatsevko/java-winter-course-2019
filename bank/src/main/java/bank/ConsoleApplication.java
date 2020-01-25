@@ -1,28 +1,24 @@
 package bank;
 
-import bank.service.PasswordEncryption;
 
-import java.security.NoSuchAlgorithmException;
-import java.security.spec.InvalidKeySpecException;
+import bank.domain.User;
+import bank.repository.impl.UserRepositoryImpl;
+import bank.service.PasswordEncryption;
+import bank.service.impl.UserServiceImp;
+import bank.service.validator.UserValidator;
 
 public class ConsoleApplication {
     public static void main(String[] args) {
-//          final User user = new User(1,"Email.com", "password", null);
-//        final UserServiceImp userService =  new UserServiceImp(new UserRepositoryImpl(), passwordEncruptor, userValidator);
-//        final boolean b = userService.login("vasia", "mama");
-//        final User user = User.builder()
-//                .withId(1)
-//                .withEmail("ss")
-//                .withPassword("asd")
-//                .withAccounts(null)
-//                .build();
 
-        PasswordEncryption passwordEncryption = new PasswordEncryption();
-        try {
-            System.out.println(passwordEncryption.hashPassword("mama"));
-        } catch (NoSuchAlgorithmException | InvalidKeySpecException e) {
-            e.printStackTrace();
-        }
+        final UserServiceImp userService = new UserServiceImp(new UserRepositoryImpl(), new PasswordEncryption(), new UserValidator());
+        final User user = User.builder()
+                .withId(1)
+                .withEmail("olena@gmail.com")
+                .withPassword("Q1234@fghj")
+                .withAccounts(null)
+                .build();
+        System.out.println(userService.register(user).toString());
+        System.out.println(userService.login("olena@gmail.com", "Q1234@fghj"));
 
 
     }

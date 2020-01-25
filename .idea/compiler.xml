@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <option name="USE_RELEASE_OPTION" value="false" />
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -9,30 +10,18 @@
         <module name="task-one" />
         <module name="lesson3" />
         <module name="reflection-junit-annotation" />
-        <module name="lesson2-immutable" />
         <module name="task4" />
+        <module name="lessons" />
         <module name="task2" />
         <module name="task-five" />
-        <module name="lessons" />
         <module name="intermediate-project" />
+        <module name="task-three" />
         <module name="first-part" />
         <module name="bank" />
         <module name="lesson4" />
-        <module name="task-three" />
+        <module name="lesson2-immutable" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="11">
-      <module name="class-work" target="11" />
-      <module name="first-lesson" target="1.8" />
-      <module name="task-eight" target="11" />
-      <module name="task-eleven" target="11" />
-      <module name="task-four" target="11" />
-      <module name="task-nine" target="11" />
-      <module name="task-seven" target="11" />
-      <module name="task-six" target="11" />
-      <module name="task-ten" target="11" />
-      <module name="task-two" target="11" />
-      <module name="test-lesson-first" target="11" />
-    </bytecodeTargetLevel>
+    <bytecodeTargetLevel target="8" />
   </component>
 </project>

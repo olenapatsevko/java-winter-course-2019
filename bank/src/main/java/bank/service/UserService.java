@@ -3,12 +3,11 @@ package bank.service;
 import bank.domain.User;
 import bank.exception.ValidationException;
 
-import java.security.NoSuchAlgorithmException;
-import java.security.spec.InvalidKeySpecException;
+
 
 public interface UserService {
 
-    boolean login(String email, String password) throws InvalidKeySpecException, NoSuchAlgorithmException;
+    boolean login(String email, String password);
 
     User register(User user) throws ValidationException;
 

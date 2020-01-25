@@ -1,5 +1,6 @@
 package bank.domain;
 
+import bank.service.PasswordEncryption;
 import bank.utility.CollectionUtility;
 
 import java.util.List;
@@ -8,9 +9,9 @@ import java.util.Objects;
 
 public class User {
     private final Integer id;
-    private final String email;
-    private final String password;
-    private final List<Account> accounts;
+    private String email;
+    private String password;
+    private List<Account> accounts;
 
 
     public Integer getId() {
@@ -41,13 +42,18 @@ public class User {
         return "User{" +
                 "id=" + id +
                 ", email='" + email + '\'' +
-                ", password='" + "[**********]" + '\'' +
+                ", password='" + password + '\'' +
                 ", accounts=" + accounts +
                 '}';
     }
 
     public static Builder builder() {
         return new Builder();
+    }
+
+
+    public void hashPassword() {
+        this.password = PasswordEncryption.encrypt(this.getPassword());
     }
 
     @Override
