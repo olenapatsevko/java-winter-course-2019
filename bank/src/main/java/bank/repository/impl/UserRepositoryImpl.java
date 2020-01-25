@@ -17,7 +17,7 @@ public class UserRepositoryImpl implements UserRepository {
 
     @Override
     public void save(User entity) {
-        userMap.replace(entity.getId(), entity);
+        userMap.put(entity.getId(), entity);
     }
 
     @Override
